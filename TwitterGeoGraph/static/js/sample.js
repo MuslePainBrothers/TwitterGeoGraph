@@ -5,7 +5,6 @@ var center = {
     lng: 135.51002519999997 // 経度
 };
 function initMap() {
-    console.log("initMap");
     map = new google.maps.Map(document.getElementById('sample'), { // #sampleに地図を埋め込む
         center: center, // 地図の中心を指定
         zoom: 19 // 地図のズームを指定
@@ -16,8 +15,3 @@ function initMap() {
         map: map // マーカーを立てる地図を指定
     });
 }
-function test(){
-    console.log("hello, world");
-}
-
-console.log("this is sample.js")
