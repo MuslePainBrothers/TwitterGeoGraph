@@ -16,8 +16,3 @@ function initMap() {
         map: map // マーカーを立てる地図を指定
     });
 }
-function test(){
-    console.log("hello, world");
-}
-
-console.log("this is sample.js")
