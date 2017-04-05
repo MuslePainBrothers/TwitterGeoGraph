@@ -5,7 +5,7 @@ var center = {
     lng: 135.51002519999997 // 経度
 };
 function initMap() {
-    map = new google.maps.Map(document.getElementById('sample'), { // #sampleに地図を埋め込む
+    map = new google.maps.Map(document.getElementById('mainmap'), { // #sampleに地図を埋め込む
         center: center, // 地図の中心を指定
         zoom: 19 // 地図のズームを指定
     });

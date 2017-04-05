@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <title>トップページ</title>
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    <script src="{% static 'js/sample.js' %}"></script>
+    <script src="{% static 'js/map.js' %}"></script>
 </head>
 <body>
 トップページ
+<HR>
 
-<div id="sample"></div>
+<br>
+
+<div id="mainmap"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key={{ key }}&callback=initMap"></script>
 key = {{ key }}
 </body>
