@@ -1,16 +1,15 @@
+{% extends "base.html" %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>トップページ</title>
+
+{% block extra_head %}
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <script src="{% static 'js/map.js' %}"></script>
-</head>
-<body>
-トップページ
+{% endblock %}
+
+{% block content %}
+
+<h1>Map</h1>
 <HR>
-user = {{user}}
 
 <br>
 
@@ -18,5 +17,5 @@ user = {{user}}
 <div id="mainmap"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key={{ key }}&callback=initMap"></script>
-</body>
-</html>
+
+{% endblock %}

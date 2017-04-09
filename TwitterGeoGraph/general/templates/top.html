@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Top</h1>
+<HR>
+
+①twitterをクロールする<br>
+<a href="{% url 'general:clawler' %}">クロール</a><br>
+<br>
+②mapで確認する（過去の自分の結果のみ、クロールしていない場合は表示しない）<br>
+<a href="{% url 'general:map' %}">マップ</a><br>
+<br>
+③mapで確認する（他の人の情報も確認可能、実装未定）<br>
+
+{% endblock %}

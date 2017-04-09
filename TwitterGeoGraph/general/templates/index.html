@@ -1,28 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>index page</title>
-</head>
-<body>
-<h1>Index</h1>
+{% extends "base.html" %}
 
+{% block content %}
+
+<h1>Index</h1>
+<HR>
 ※完成前に削除<br>
+①register画面でtwitter認証<br>
+・認証後、top画面に移動<br>
+②top画面で[twitterをクロール]、[mapで確認]を選択する<br>
+③[twitterをクロール]の場合、tweepyでユーザのtwitterをクロールする<br>
+・クロール後、自分だけのマーカが表示されるmap画面に移動<br>
+④[mapで確認]の場合、map画面に移動<br>
+<HR>
 
 <br>
 
-①<br>
-twitterアカウントのURLから飛ばされてきた場合（初回時）<br>
+①
+twitterアカウントのURLから飛ばされてきた場合<br>
 <a href="{% url 'web:register' %}">twitter連携ページに移動</a><br>
 
 <br>
 
-②<br>
+②
 すでに連携済み<br>
 <a href="{% url 'general:top' %}">トップページに移動</a><br>
 
 <br>
 
-
-</body>
-</html>
+{% endblock %}

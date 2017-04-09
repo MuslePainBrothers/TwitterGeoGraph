@@ -1,31 +1,23 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>register page</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
+
 <h1>Register</h1>
+<HR>
 
-    user = {{user}}<br>
-    user.get_full = {{ user.get_full_name|default:user.username }}<br>
+<ul>
+    {% if user and not user.is_anonymous %}
+        <li>
+            <a>Hello {{ user.get_full_name|default:user.username }}!</a>
+        </li>
+        <li>
+            <a href="{% url 'auth:logout' %}?next={% url 'web:register' %}">Logout</a>
+        </li>
+    {% else %}
+        <li>
+            <a href="{% url 'social:begin' 'twitter' %}?next={% url 'general:top' %}">Login with Twitter</a>
+        </li>
+    {% endif %}
+</ul>
 
-
-    <ul>
-        {% if user and not user.is_anonymous %}
-            <li>
-                <a>Hello {{ user.get_full_name|default:user.username }}!</a>
-            </li>
-            <li>
-                <a href="{% url 'auth:logout' %}?next={% url 'general:index' %}">Logout</a>
-            </li>
-        {% else %}
-            <li>
-                <a href="{% url 'social:begin' 'twitter' %}?next={% url 'web:register' %}">Login with Twitter</a>
-            </li>
-        {% endif %}
-    </ul>
-
-</body>
-</html>
+{% endblock %}
