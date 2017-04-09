@@ -25,6 +25,7 @@ def clawlerTwitter(request):
     # python_social_authモデルのuser_social_authsを取りたい
     #
     # （保留）
+    #  test_code/test_tweepy
     #
     user = request.user
     print(user)
