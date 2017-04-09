@@ -3,3 +3,5 @@
 __pycache__/
 *.py[cod]
 settings.py
+db.sqlite3
+

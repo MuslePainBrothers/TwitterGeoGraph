@@ -1,22 +1,16 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>トップページ</title>
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    <script src="{% static 'js/map.js' %}"></script>
-</head>
-<body>
-トップページ
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Top</h1>
 <HR>
-user = {{user}}
 
+①twitterをクロールする<br>
+<a href="{% url 'general:clawler' %}">クロール</a><br>
 <br>
+②mapで確認する（過去の自分の結果のみ、クロールしていない場合は表示しない）<br>
+<a href="{% url 'general:map' %}">マップ</a><br>
+<br>
+③mapで確認する（他の人の情報も確認可能、実装未定）<br>
 
-<!-- google mapの表示 -->
-<div id="mainmap"></div>
-
-<script src="https://maps.googleapis.com/maps/api/js?key={{ key }}&callback=initMap"></script>
-</body>
-</html>
+{% endblock %}

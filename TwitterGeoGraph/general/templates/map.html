@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block extra_head %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'js/map.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<h1>Map</h1>
+<HR>
+
+<br>
+
+<!-- google mapの表示 -->
+<div id="mainmap"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key={{ key }}&callback=initMap"></script>
+
+{% endblock %}
